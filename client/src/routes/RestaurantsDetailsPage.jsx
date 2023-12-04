@@ -4,26 +4,28 @@ import { RestaurantContext } from '../context/RestaurantContext';
 import RestaurantFinder from '../apis/RestaurantFinder';
 
 export default function RestaurantsDetailsPage() {
-  const {id}=useParams();
-  const {selectedRestaurants,setSelectedRestaurants}=useContext(RestaurantContext);
-  useEffect(()=>{
-const fetchData=async ()=>{
-try{
-  const response  =await RestaurantFinder.get(`/${id}`);
-    setSelectedRestaurants(response.data.data.restaurant)
-}
-catch(err){
-console.log(err);
-}
+  // const {id}=useParams();
+   //const {selectedRestaurants,setSelectedRestaurants}=useContext(RestaurantContext);
+  // useEffect(()=>{
+// const fetchData=async ()=>{
+ // try{
+ // const response  =await RestaurantFinder.get(`/${id}`);
+   // setSelectedRestaurants(response.data.data.restaurant)
+//}
+//catch(err){
+//console.log(err);
+//}
   
-}
-fetchData(); 
-  }
- ,[])
+//}
+//fetchData(); 
+  //}
+ //,[])
    
-  return (
+ // return (
     <div>
-    {selectedRestaurants.name}
+   // {selectedRestaurants.name}
+
+      <h1>Detail page </h1>
     </div>
   )
 }
